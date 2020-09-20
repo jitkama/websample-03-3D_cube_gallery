@@ -5,8 +5,10 @@ Blanka.css: Seting basic document typography
 - block elements with bottom margins only
 - same left margins for ul/ol, dd, blockquote
 */
-html { font-size: 10px; 
-    box-sizing: border-box;}
+html {
+    font-size: 10px;
+    box-sizing: border-box;
+}
 
 /*
 Document minimal paddings
@@ -16,7 +18,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: 'Gayathri', sans-serif;
-    
+
 }
 
 
@@ -28,6 +30,7 @@ body {
     max-width: 1100px;
     margin: 0 auto;
 }
+
 header {
     top: 0;
     width: 100%;
@@ -35,25 +38,30 @@ header {
     background-color: dimgrey;
     color: #fff;
 }
+
 header .container {
     display: flex;
     justify-content: space-between;
     height: inherit;
 }
+
 .logo-box {
     width: 20rem;
     height: inherit;
     font-size: 2rem;
-    display:flex;
+    display: flex;
     align-items: center;
 }
+
 .logo-box span {
     color: #5ad104;
     padding-left: 1rem;
 }
+
 .main-nav {
     height: inherit;
 }
+
 .main-nav-list {
     margin: 0;
     list-style-type: none;
@@ -63,6 +71,7 @@ header .container {
     font-size: 2rem;
     height: inherit;
 }
+
 .main-nav-item {
     margin: 0;
     padding: 0 2rem;
@@ -79,10 +88,11 @@ header .container {
     background-color: #555;
     border-bottom: 4px solid #5ad104;
 }
+
 .main-nav-item a,
 .main-nav-item a:link,
 .main-nav-item a:visited {
-    margin: auto 0;   
+    margin: auto 0;
     color: #fff;
     text-decoration: none;
 }
@@ -115,13 +125,15 @@ ABOUT TEXT
     padding: 3rem;
     border-radius: 10px;
     font-size: 2rem;
-    background-color: rgba(255,255,255,0.9);
+    background-color: rgba(255, 255, 255, 0.9);
 }
-.about a, 
+
+.about a,
 .about a:active,
 .about a:visited {
     color: #357905;
 }
+
 /*
 ------------------------------------------
 GALLERY SECTION
@@ -131,8 +143,9 @@ GALLERY SECTION
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items:stretch;
+    align-items: stretch;
 }
+
 .left-box {
     align-self: center;
     display: flex;
@@ -140,6 +153,7 @@ GALLERY SECTION
     justify-content: center;
     align-items: center;
 }
+
 .right-box {
     position: relative;
     perspective: 600px;
@@ -162,6 +176,7 @@ ARROW CONTROLS
     color: #fff;
     font-size: 3rem;
 }
+
 .arrows-wrap i {
     display: flex;
     justify-content: center;
@@ -172,22 +187,27 @@ ARROW CONTROLS
     height: 5rem;
     transition: background-color .5s ease;
 }
+
 .arrows-wrap i:hover {
-   background-color: #5ad104;
+    background-color: #5ad104;
     color: #222;
 }
+
 .arr-top {
     grid-column: 3/4;
     grid-row: 1/2;
 }
+
 .arr-left {
     grid-column: 2/3;
     grid-row: 2/3;
 }
+
 .arr-right {
     grid-column: 4/5;
     grid-row: 2/3;
 }
+
 .arr-bottom {
     grid-column: 3/4;
     grid-row: 3/4;
@@ -226,31 +246,36 @@ ARROW CONTROLS
     background: url('front.jpg') no-repeat center center;
     background-size: cover;
 }
+
 .cube-right {
     transform: rotateY(-90deg);
     transform-origin: right;
     background: url('right.jpg') no-repeat center center;
     background-size: cover;
 }
+
 .cube-left {
     background: url('left.jpg') no-repeat center center;
     background-size: cover;
     transform: rotateY(90deg);
     transform-origin: left;
 }
+
 .cube-top {
     background: url('top.jpg') no-repeat center center;
     background-size: cover;
     transform: rotateX(-90deg);
     transform-origin: top;
 }
+
 .cube-bottom {
     background: url('bottom.jpg') no-repeat center center;
     background-size: cover;
     transform: rotateX(90deg);
     transform-origin: bottom;
-   
+
 }
+
 .cube-back {
     background: url('back.jpg') no-repeat center center;
     background-size: cover;
@@ -280,7 +305,7 @@ MEDIA QUERIES
 ------------------------------------------
 */
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 900px) {
     .gallery-wrap {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr auto;
@@ -288,103 +313,120 @@ MEDIA QUERIES
         align-items: center;
         justify-content: center;
     }
+
     .right-box {
         position: relative;
         perspective: 600px;
         height: 60vw;
         width: 60vw;
         margin: 0 auto;
-        
+
     }
+
     .cube-wrap {
         transform-origin: center center -30vw;
     }
+
     .cube {
         height: 60vw;
         width: 60vw;
         transform: translateZ(-30vw);
     }
-   
+
     .cube-front {
         transform: rotateY(0deg);
         background: url('front.jpg') no-repeat center center;
         background-size: cover;
     }
+
     .cube-right {
         transform: rotateY(-90deg);
         transform-origin: right;
         background: url('right.jpg') no-repeat center center;
         background-size: cover;
     }
+
     .cube-left {
         background: url('left.jpg') no-repeat center center;
         background-size: cover;
         transform: rotateY(90deg);
         transform-origin: left;
     }
+
     .cube-top {
         background: url('top.jpg') no-repeat center center;
         background-size: cover;
         transform: rotateX(-90deg);
         transform-origin: top;
     }
+
     .cube-bottom {
         background: url('bottom.jpg') no-repeat center center;
         background-size: cover;
         transform: rotateX(90deg);
         transform-origin: bottom;
-       
+
     }
+
     .cube-back {
         background: url('back.jpg') no-repeat center center;
         background-size: cover;
         transform: rotateY(180deg) translateZ(30vw);
     }
+
     .cube-back {
         transform: rotateY(180deg) translateZ(60vw);
     }
+
     .arrows-wrap {
         display: grid;
         grid-template-columns: 1fr repeat(4, 7rem) 1fr;
         grid-template-rows: 1fr;
     }
+
     .arrows-wrap i {
         width: 5rem;
         height: 5rem;
     }
-    
+
     .arr-top {
         grid-column: 3/4;
         grid-row: 1/2;
     }
+
     .arr-left {
         grid-column: 2/3;
         grid-row: 1/2;
     }
+
     .arr-right {
         grid-column: 5/6;
         grid-row: 1/2;
     }
+
     .arr-bottom {
         grid-column: 4/5;
         grid-row: 1/2;
     }
+
     header .container {
         display: flex;
-    flex-direction: column;
-    align-items: center;
+        flex-direction: column;
+        align-items: center;
     }
+
     .logo-box {
         font-size: 1.5rem;
         padding-top: .5rem;
-display: flex;
-justify-content: center;
+        display: flex;
+        justify-content: center;
     }
+
     .main-nav-list,
     .main-nav {
         display: none;
         height: 0;
     }
-   
-   
+
+
 }
